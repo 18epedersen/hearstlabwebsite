@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Site-info -->
+    <meta name="author" content="CS 160">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta property="og:title" content="CS160 | User Interface Design">
+    <meta property="og:description" content="Introduction to Human Computer Interaction at UC Berkeley.">
+    <title>
+      {% if page.title %}
+        {{ site.title }} - {{ page.title | capitalize }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+
+    <!-- Material CSS -->
+    <link rel="stylesheet" href="/assets/material.min.css">
+    <script src="/assets/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/custom.css">
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58096309-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-58096309-4');
+    </script>
+  </head>
+
+  <body>
+
+    <div class="wrap">
+
+      <div class="masthead">
+        <!-- <p class="site-info">
+          UC Berkeley<br/>
+          Fall 2017
+        </p> -->
+        <h1 id="site-title">
+          <a href="/">{{ site.title }}</a>
+        </h1>
+        <div class="nav">
+          <a href="/" title="home">home</a> ::
+          <a href="/{{ site.base_name }}/projectspage" title="schedule">projects</a> ::
+         <!--  <a href="/{{ site.base_name }}/showcase" title="schedule">showcase</a> ::
+          <a href="/{{ site.base_name }}/details" title="details">details</a> -->
+        </div>
+      </div>
+
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+  </body>
+</html>
